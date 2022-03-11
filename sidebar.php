@@ -4,14 +4,14 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package _s
+ * @package pstones_s
  */
 
-if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+if ( ! is_activepstones_sidebar( 'sidebar-1' ) ) {
 	return;
 }
 ?>
 
 <aside id="secondary" class="widget-area">
-	<?php dynamic_sidebar( 'sidebar-1' ); ?>
+	<?php dynamicpstones_sidebar( 'sidebar-1' ); ?>
 </aside><!-- #secondary -->

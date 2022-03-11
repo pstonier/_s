@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package _s
+ * @package pstones_s
  */
 
 get_header();
@@ -53,5 +53,5 @@ get_header();
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
+getpstones_sidebar();
 get_footer();

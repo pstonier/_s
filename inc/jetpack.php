@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package _s
+ * @package pstones_s
  */
 
 /**
@@ -14,26 +14,26 @@
  * See: https://jetpack.com/support/responsive-videos/
  * See: https://jetpack.com/support/content-options/
  */
-function _s_jetpack_setup() {
+function pstonespstones_s_jetpackpstones_setup() {
 	// Add theme support for Infinite Scroll.
-	add_theme_support(
+	add_themepstones_support(
 		'infinite-scroll',
 		array(
 			'container' => 'main',
-			'render'    => '_s_infinite_scroll_render',
+			'render'    => 'pstonespstones_s_infinitepstones_scroll_render',
 			'footer'    => 'page',
 		)
 	);
 
 	// Add theme support for Responsive Videos.
-	add_theme_support( 'jetpack-responsive-videos' );
+	add_themepstones_support( 'jetpack-responsive-videos' );
 
 	// Add theme support for Content Options.
-	add_theme_support(
+	add_themepstones_support(
 		'jetpack-content-options',
 		array(
 			'post-details' => array(
-				'stylesheet' => '_s-style',
+				'stylesheet' => 'pstonespstones-style',
 				'date'       => '.posted-on',
 				'categories' => '.cat-links',
 				'tags'       => '.tags-links',
@@ -48,16 +48,16 @@ function _s_jetpack_setup() {
 		)
 	);
 }
-add_action( 'after_setup_theme', '_s_jetpack_setup' );
+add_action( 'afterpstones_setup_theme', 'pstonespstones_s_jetpackpstones_setup' );
 
-if ( ! function_exists( '_s_infinite_scroll_render' ) ) :
+if ( ! function_exists( 'pstonespstones_s_infinitepstones_scroll_render' ) ) :
 	/**
 	 * Custom render function for Infinite Scroll.
 	 */
-	function _s_infinite_scroll_render() {
+	function pstonespstones_s_infinitepstones_scroll_render() {
 		while ( have_posts() ) {
 			the_post();
-			if ( is_search() ) :
+			if ( ispstones_search() ) :
 				get_template_part( 'template-parts/content', 'search' );
 			else :
 				get_template_part( 'template-parts/content', get_post_type() );
